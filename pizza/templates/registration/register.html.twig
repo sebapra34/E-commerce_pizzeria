@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="assets/css/register.css">{% endblock %}
+
+
+
+{% block body %}
+{# {% include 'navbar/navbar_user.html.twig' %} <br> #}
+    <h1>Inscription</h1><br>
+
+    <div class="infos">
+        {{ form_start(registrationForm) }}
+            <div class="put">
+                {{ form_row(registrationForm.email) }} <br>
+                {{ form_row(registrationForm.plainPassword, {label: 'Mot de passe'}) }}<br>
+                {{ form_row(registrationForm.nom)}}<br>
+                {{ form_row(registrationForm.prenom)}}<br>
+                {{ form_row(registrationForm.tel)}}<br>
+                {{ form_row(registrationForm.rue)}}<br>
+                {{ form_row(registrationForm.cp)}}<br>
+                {{ form_row(registrationForm.ville)}}<br>
+            </div>
+            <button type="submit" class="btn">Vous enregistrer</button>
+        {{ form_end(registrationForm) }}
+        </div>
+    {% endblock %}

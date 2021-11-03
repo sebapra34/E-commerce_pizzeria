@@ -1,0 +1,94 @@
+Html {font-size: 100%;}
+
+body {
+    background-color: beige;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.banniere {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.Nav_Log {
+    float: right;
+}
+
+.Nav_Accueil, .Nav_Pizzas {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 1s;
+}
+li a:hover {
+    background-color: #111;
+    transition: 2s;
+}
+
+
+#Logo{
+    height: 50%;
+}
+
+#profil{
+    height: 50%;
+  }
+
+#panier {
+    height: 50%;
+}
+
+
+.corps{
+    position: relative;
+    top: 10%;
+    text-align: center;
+}
+
+h1 {
+    color:#333;
+    font-weight: normal;
+}
+
+.resume_commande{
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    background-color:white;
+    left: 30%;
+    padding-left: 1%;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
+    font-weight: lighter;
+    color: #333;
+}
+
+input[type=button]{
+    all:unset;
+    color: white;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 10px;
+    border-color: #333;
+    box-shadow: rgba(59, 59, 59, 0.2) 2px 7px 10px 0px;
+    letter-spacing: 1px;
+}
+input[type=button]:hover {
+    background-color:rgb(80, 80, 80);
+}

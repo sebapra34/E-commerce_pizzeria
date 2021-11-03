@@ -1,0 +1,30 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# accueil :
+#   path: /
+#   controller: App\Controller\HomeController::accueil
+
+
+
+
+
+
+
+
+
+# home : 
+    # path: http://localhost:8000/home
+    #controller : App\Controller\HomeController::accueil
+
+
+# login :
+
+# register : 
+
+# catalogue : 
+
+# profil/user
+
+# order

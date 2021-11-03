@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/nos_pizzas.css">
+    <title>Catalogue de nos pizzas</title>
+</head>
+<body>
+
+ <!----------------------- NAV ---------------------->
+
+        {% include 'navbar/navbar_user.html.twig' %}
+
+
+
+    <h1> Nos pizzas </h1>
+    
+    <!----------------------PRODUCTS----------------------->
+    
+    
+    <section class="product_section layout_padding2-top layout_padding-bottom">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <p> Mamamïa, les plus belles pizzas de toute la ville, qu'est-ce que tu attends pour commander ?<br>  
+              blablablablabla blablabla bla bla en italien</p>
+            </div>
+            
+            <!-------------------FILTER -------------------------->
+                <label for="filtre_pizza">Choisissez un filtre:</label>
+                <select name="filtre_pizza" id="filtre_pizza">
+                    <option value="">--Trier par--</option>
+                    <option value="prix">Prix</option>
+                    <option value="taille">Taille</option>
+                    <option value="couleur">Couleur</option>
+                </select>
+
+
+        <div class="row">
+
+           {% for piz in pizza %}
+
+            <div class="col-sm-6 col-lg-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{{piz.image}}" alt="">
+                </div>
+                <div class="detail-box">
+                  <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-half-wide"></i>
+                        <i class="fi-xwluxl-star-wide"></i>  
+                  </span>
+                  <p class="nom_pizza">{{piz.nom}}</p>
+                  <p>Ingredients : {{piz.details}} <br>
+                  <!--Tomate, Fromage, Camembert, Chèvre, Mozzarella, Noix, Roquefort-->
+                    Couleur :  {{piz.couleur}}<br>
+                    Taille : {{piz.taille}}</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                    {{piz.prix}}<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                    
+                        {# <input type="number" min="0" max="8" placeholder="quantité"> <br> #}
+                        <a href="{{ path('pizza.detail', {id: piz.id}) }}" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a> 
+                        
+                  </div>
+                </div>
+              </div>
+            </div>
+              {% endfor %}
+
+
+            {# <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../assets/min_produits/Norvegienne.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                  <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>  
+                        <i class="fi-xwluxl-star-half-wide"></i>
+                  </span>
+                    <a href="">Norvegienne</a>
+                    <p>Ingredients : Tomate, Fromage, Crème fraîche, Mozzarella, Origan, Saumon fumé</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      12.50<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                        <input type="number" min="0" max="8" placeholder="quantité"> <br>
+                        <a href="#" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a>
+                  </div>
+                </div>
+              </div>
+            </div> #}
+
+              {# <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../assets/min_produits/chevre_miel.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                    </span>
+                    <a href="">Chèvre-miel</a>
+                    <p>Ingredients : Fromage, Chèvre, Crème fraîche, Miel, Noix</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      12.00<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                        <input type="number" min="0" max="8" placeholder="quantité"> <br>
+                        <a href="#" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../assets/min_produits/Margherita.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                    </span>
+                    <a href="">Margherita</a>
+                    <p>Ingredients : Tomate, Fromage, Olives, Anchois, Mozzarella, Origan</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      11.00<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                        <input type="number" min="0" max="8" placeholder="quantité"> <br>
+                        <a href="#" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../assets/min_produits/pesto_poulet.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                    </span>
+                    <a href="">Pesto-poulet</a>
+                    <p>Ingredients : ---</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      14.00<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                        <input type="number" min="0" max="8" placeholder="quantité"> <br>
+                        <a href="#" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../assets/min_produits/Royale.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                    </span>
+                    <a href="">Royale</a>
+                    <p>Ingredients : Tomate, Fromage, Lardons, Oignons, Poivron rouge, Janbon cru, Magrets sechés</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      15.50<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                        <input type="number" min="0" max="8" placeholder="quantité"> <br>
+                        <a href="#" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../assets/min_produits/Speciale.PNG" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <span class="rating">
+                        <i class="fi-xnsuxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                        <i class="fi-xwluxl-star-solid"></i>
+                    </span>
+                    <a href="">Spéciale</a>
+                    <p>Ingredients : Tomate, Fromage, Poivron rouge, Aubergines grillées, Jambon cru, Persillade</p>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      15.00<span>€</span>
+                    </div>
+                    </h6>
+                    <div class="achat">
+                        <input type="number" min="0" max="8" placeholder="quantité"> <br>
+                        <a href="#" ><img class="pizza_icone" src="../assets/pizza_icone.png"></a>
+                  </div>
+                </div>
+              </div>
+            </div> #}
+
+
+            {# <div>{% for pizza in pizza %}
+              <div>
+              {{ loop.catalogue }} - {{ pizza.nom }}
+              </div>
+            {% endfor %}
+            </div> #}
+
+   
+   {# {% for piz in pizza %}
+   {{piz.nom}}
+   {{piz.details}}
+   {{piz.couleur}}
+   {{piz.taille}}.cm
+   {{piz.prix}}€
+   {% endfor %} #}
+   
+            
+
+
+            </div> <!-- fin container row-->
+
+              <div class="btn-box">
+                  <a href="">View All</a>
+                </div>
+          </section>
+    
+  <script src="js/nos_pizzas.js"></script>  
+</body>
+</html>

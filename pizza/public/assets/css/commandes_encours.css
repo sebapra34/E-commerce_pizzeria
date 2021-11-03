@@ -1,0 +1,57 @@
+Html {font-size: 100%;}
+
+body {
+    background-color: beige;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+
+ul {
+    overflow: hidden;
+}
+
+
+.corps{
+    position: relative;
+    top: 10%;
+}
+
+h1 {
+    color:#333;
+    font-weight: normal;
+}
+
+h3 {
+    text-align: center;
+}
+
+.commande{
+    float: left;
+    width: 20%;
+    background-color:white;
+    padding-left: 1%;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
+    font-weight: lighter;
+    color: #333;
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+
+input[type=button]{
+    all:unset;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+.sup[type=button]{
+    background-color: red;
+}
+
+.valider[type=button]{
+    background-color: rgb(18, 187, 18);
+    position: relative;
+    left: 40%;
+
+}

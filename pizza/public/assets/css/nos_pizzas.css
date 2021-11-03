@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: beige;
+    /* background-image: url("../assets/Pizzaiolo.jpg"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Helvetica, sans-serif;
+    /* width: 100vh; */
+}
+
+/*-------------------NAV BAR -----------------------*/
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .Nav_Log {
+    float: right;
+  }
+
+  .Nav_Accueil, .Nav_Pizzas {
+    float: left;
+  }
+
+  .Nav_Profil {
+    width:10px;
+    height: 10px;
+  }
+
+  
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 1s;
+  }
+  
+  li a:hover {
+    background-color: #f1f1f1;
+    transition: 2s;
+    color:rgb(202, 41, 41);
+    font-size: 1.1em;
+  }
+
+  /*---------------------------------------------- */
+
+
+  h1 {
+      font-size: 3em;
+      margin-left: 10%;
+      font-family: 'Italiana', serif;
+  }
+
+  label, .filtre_pizza {
+      margin-left: 80%;
+    }
+    
+    .heading_container {
+        width: 50%;
+        margin-left: 10%;
+        -webkit-backdrop-filter: blur(15px); /* compatibilité avec safari */
+        backdrop-filter: blur(50px);
+        background-color: rgba(243, 219, 219, 0.2);
+        font-family: 'Italiana', serif;
+        font-weight: 600;
+      
+
+  }
+
+  p{
+      font-style: italic;
+      filter:none;
+  }
+
+  /* i [class*="fi"] {
+	color:orange;
+} */
+
+
+
+
+
+.product_section .box {  /* box fiche produit*/
+    
+    text-align: center;
+    background-color: #e9c998;
+    padding: 5px;
+    margin : 5px;
+    width: 98%;
+    border-radius: 10px;
+    box-shadow: 2px 7px 14px 0px #333;
+    /* flex-wrap: wrap; */
+  }
+
+  
+  .product_section .box .img-box {
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 195px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .product_section .box .img-box img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 2px 7px 14px 0px #333;
+    border-radius: 5px;
+    /* min-width: 60%;
+    min-height: 80%; */
+  }
+
+  .product_section .box .detail-box {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+  }
+  
+  .product_section .box .detail-box .rating {
+    width: 100%;
+    border-bottom: 1px solid #888;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #f89646;
+  }
+  
+  .product_section .box .detail-box .nom_pizza {
+    font-size: 18px;
+    color: #611111;
+    transition: 0.5s;
+    font-weight: 900;
+    border-bottom:1px solid #611111;
+  }
+
+  
+  .product_section .box .detail-box .price_heading {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight:700;
+    font-size: 16px;
+  }
+
+  .price_box {
+    border-top: 1px solid #888;
+    padding-top: 10px;
+    /* margin-top: 15px; */
+    width:100%;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+  }
+
+  .achat input {
+
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-top: 5px;
+}
+  .achat img {
+      /* margin-top: 5px; */
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;
+      /* filter: saturate(2); */
+  }
+
+    .achat img:hover {
+      animation: tourne 1s linear infinite;
+}
+
+@keyframes tourne {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-50deg);
+    }
+    50% {
+    transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(50deg);
+    }
+}
+
+  
+  /* .product_section .box .detail-box .price_heading span {
+    color: #4E7F6A;
+  } */
+  
+  .product_section .btn-box {
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .product_section .btn-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #4E7F6A;
+    color: #ffffff;
+    border-radius: 0;
+    border: 1px solid #4E7F6A;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  
+  .product_section .btn-box a:hover {
+    background-color: transparent;
+    color: #4E7F6A;
+  }
+
+
+.row { /* container produits global */
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+  .col-sm-6, .col-lg-4  {
+width: 30%;
+height: 50%;
+padding: 20px;
+  } 

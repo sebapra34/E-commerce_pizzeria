@@ -1,0 +1,75 @@
+Html {font-size: 100%;}
+
+body {
+    background-color: beige;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+/* 
+#Logo{
+    height: 50%;
+} */
+
+
+/* #panier {
+    height: 50%;
+} */
+
+
+.corps{
+    position: relative;
+    top: 10%;
+    text-align: center;
+}
+
+h1 {
+    color:#333;
+    font-weight: normal;
+}
+
+h3 {
+    text-align: left;
+}
+
+.modif{
+    all:unset;
+    color: white;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 10px;
+    border-color: #333;
+    box-shadow: rgba(59, 59, 59, 0.2) 2px 7px 10px 0px;
+    letter-spacing: 1px;
+}
+.modif:hover {
+    background-color:rgb(80, 80, 80);
+}
+
+.infos{
+    position: absolute;
+    width: 30%;
+    text-align: center;
+    background-color:white;
+    left: 10%;
+    padding-left: 1%;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
+    font-weight: lighter;
+    color: #333;
+}
+
+.historique{
+    position: absolute;
+    width: 30%;
+    text-align: left;
+    background-color:white;
+    left: 60%;
+    padding-left: 1%;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
+    font-weight: lighter;
+    color: #333;
+}

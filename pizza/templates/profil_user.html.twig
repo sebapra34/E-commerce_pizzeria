@@ -1,0 +1,78 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Profil{% endblock %}</title>
+        {% block stylesheets %}
+        {% include 'navbar/navbar_user.html.twig' %}
+        <link rel="stylesheet" href="assets/css/profil_user.css">
+        {% endblock %}
+    </head>
+
+<body>
+    <div class="corps">
+
+        {% if app.user %}
+        <div class="mb-3">
+            Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Se deconnecter</a>
+        </div>
+    {% endif %} 
+        
+        <h1>BIENVENUE SUR VOTRE PROFIL </h1> <br>
+
+        <div class="infos">
+            <h3>Vos informations :</h3><br>
+
+            
+            <form action="ProfilUserController.php" method="post"> <!--AFFICHER LES INFOS DU USERS-->
+                Nom :<br>
+                <input type="text" id="nom" value="" placeholder={{app.user.nom}}><br><br>
+                Prénom :<br>
+                <input type="text" id="prenom" value="" placeholder={{app.user.prenom}}><br><br>
+                Numéro de téléphone :<br>
+                <input type="text" id="tel" value="" placeholder={{app.user.tel}}><br><br>
+                Adresse email :<br>
+                <input type="text" id="email" value="" placeholder={{app.user.email}}><br><br>
+                N° et rue :<br>
+                <input type="text" id="rue" value="" placeholder={{app.user.rue}}><br><br>
+                Code postal :<br>
+                <input type="text" id="codepostal" value="" placeholder={{app.user.cp}}><br><br>
+                Ville :<br>
+                <input type="text" id="ville" value="" placeholder={{app.user.ville}}><br><br>
+                Mot de passe :<br>
+                <input type="password" id="mdp" value="" ><br><br>
+                
+                <input type="submit" name="submit-button" class="modif" value="MODIFIER"> 
+                {# <button type="submit" class="btn">Modifier</button> #}
+            </form>  
+        </div>
+        
+
+        <div class="historique">
+            <h3>Historique des commandes :</h3>
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            1x margarita 
+                            <br>
+                            2x jambons
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Commander à nouveau">
+                        </td>
+                    </tr> 
+                </table>
+            </form>
+            
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>
